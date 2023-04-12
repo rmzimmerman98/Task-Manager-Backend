@@ -78,8 +78,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'django_api',
-        'USER': 'postgres', # I accidently set a username and password, make sure to remove these
-        'PASSWORD': 'orderchaos', # I accidently set a username and password, make sure to remove these
+        'USER': '', # I accidently set a username and password, make sure to remove these
+        'PASSWORD': '', # I accidently set a username and password, make sure to remove these
         'HOST': 'localhost'
     }
 }
