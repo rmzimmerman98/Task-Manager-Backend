@@ -31,6 +31,8 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'corsheaders',
+    'rest_framework',
     'tasks_api',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -41,6 +43,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -77,9 +80,9 @@ WSGI_APPLICATION = 'task_manager.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'django_api',
-        'USER': '', # I accidently set a username and password, make sure to remove these
-        'PASSWORD': '', # I accidently set a username and password, make sure to remove these
+        'NAME': 'tasks_api',
+        'USER': 'postgres', # I accidently set a username and password, make sure to remove these
+        'PASSWORD': 'P@ssw0rd', # I accidently set a username and password, make sure to remove these
         'HOST': 'localhost'
     }
 }
