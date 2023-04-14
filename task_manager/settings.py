@@ -53,6 +53,8 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+CORS_ALLOW_ALL_ORIGINS = True 
+
 ROOT_URLCONF = 'task_manager.urls'
 
 TEMPLATES = [
@@ -81,8 +83,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'tasks_api',
-        'USER': 'postgres', # I accidently set a username and password, make sure to remove these
-        'PASSWORD': 'P@ssw0rd', # I accidently set a username and password, make sure to remove these
+        'USER': 'postgres',
+        'PASSWORD': 'P@ssw0rd',
         'HOST': 'localhost'
     }
 }
