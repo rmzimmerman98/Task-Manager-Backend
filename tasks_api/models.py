@@ -22,3 +22,5 @@ class Task(models.Model):
     notes = models.CharField(
         blank = True
     )
+
+  
